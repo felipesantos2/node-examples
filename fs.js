@@ -1,8 +1,5 @@
-import { unlinkSync } from 'node:fs';
+import * as fs from 'node:fs';
 
-try {
-    unlinkSync('/tmp/hello');
-    console.log('successfully deleted /tmp/hello');
-} catch (err) {
-    console.log(err.message)
-}
+const file = fs.open('teste.txt', 'r');
+
+console.log(file.read())
