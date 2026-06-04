@@ -2,7 +2,7 @@ import { test, describe, expect } from "vitest";
 import { User } from "./user";
 
 
-test('should be can create and user', () => {
+test('should createa a user', () => {
     const user = new User({
         name: 'Felipe',
         email: 'santospinheiro627@gmail.com',
