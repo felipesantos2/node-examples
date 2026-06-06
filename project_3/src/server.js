@@ -1,5 +1,3 @@
 const name = "Felipe";
 
-function app() {
-
-}
+function app() { }

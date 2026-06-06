@@ -1,5 +1,8 @@
-import {} from './entities/order.js'
+import { Order } from './entities/order.js'
 
-class InMemoryDatabase {
+/**
+ *  #items <Order>
+ */
+class InMemoryOrderDatabase {
     #itens = [];
 }
