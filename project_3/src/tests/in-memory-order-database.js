@@ -1,8 +1,16 @@
-import { Order } from './entities/order.js'
+import { Order } from '../app/entities/order';
 
 /**
  *  #items <Order>
  */
-class InMemoryOrderDatabase {
-    #itens = [];
+export class InMemoryOrderDatabase {
+    #items = [];
+
+    create(data) {
+        const order = new Order(data);
+
+        this.#items.push(order);
+
+        return this.#items;
+    }
 }

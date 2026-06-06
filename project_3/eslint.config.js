@@ -49,13 +49,13 @@ export default defineConfig([
                 "error"
             ],
             "capitalized-comments": [
-                "error"
+                "off"
             ],
             "class-methods-use-this": [
-                "error"
+                "off"
             ],
             "comma-dangle": [
-                "error"
+                "off"
             ],
             "comma-spacing": [
                 "error"
@@ -118,7 +118,7 @@ export default defineConfig([
                 "error"
             ],
             "function-call-argument-newline": [
-                "error"
+                "off"
             ],
             "function-paren-newline": [
                 "error"
@@ -433,7 +433,7 @@ export default defineConfig([
                 "error"
             ],
             "no-magic-numbers": [
-                "error"
+                "off"
             ],
             "no-misleading-character-class": [
                 "error"
@@ -724,10 +724,11 @@ export default defineConfig([
                 "error"
             ],
             "one-var": [
-                "error"
+                "off"
             ],
             "one-var-declaration-per-line": [
-                "error"
+                "error",
+                "always"
             ],
             "operator-assignment": [
                 "error"
@@ -790,7 +791,8 @@ export default defineConfig([
                 "error"
             ],
             "quotes": [
-                "error"
+                "error",
+                "single"
             ],
             "radix": [
                 "error"
@@ -820,7 +822,7 @@ export default defineConfig([
                 "error"
             ],
             "sort-imports": [
-                "error"
+                "off", { "ignoreMemberSort": false }
             ],
             "sort-keys": [
                 "error"

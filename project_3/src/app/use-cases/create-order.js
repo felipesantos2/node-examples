@@ -1,1 +1,7 @@
-export class CreateOrder { }
+export class CreateOrderUseCase {
+
+    execute(data, orderRepository) {
+        return orderRepository.create(data);
+    }
+
+}
