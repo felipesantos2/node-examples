@@ -1,8 +1,5 @@
-import { Order } from '../app/entities/order';
+import { Order } from '../app/entities/order.js';
 
-/**
- *  #items <Order>
- */
 export class InMemoryOrderDatabase {
     #items = [];
 

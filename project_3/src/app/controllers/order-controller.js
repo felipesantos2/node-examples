@@ -3,6 +3,7 @@ import { OrderRepository } from '../repositories/order-repository.js';
 
 export class OrderController {
     store(data, createOrderUseCase) {
+
         const db = new InMemoryOrderDatabase();
         const orderRepository = new OrderRepository(db);
 

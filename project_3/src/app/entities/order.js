@@ -7,6 +7,8 @@ class OrderProps {
 
     type = 'normal';
 
+    description = 'Lorem ipsum dolor dorime'
+
     constructor(props) {
         const { orderId, amount, customerId } = props;
 
@@ -31,6 +33,6 @@ export class Order extends OrderProps {
             this.type = 'premium';
 
         }
-
     }
+
 }
