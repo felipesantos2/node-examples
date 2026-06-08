@@ -2,8 +2,7 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "mongoose": "^9.6.3",
-    "vitest": "^4.1.8"
+    "mongoose": "^9.6.3"
   },
   "name": "project_5",
   "version": "1.0.0",
@@ -21,6 +20,7 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.4.1",
-    "globals": "^17.6.0"
+    "globals": "^17.6.0",
+    "vitest": "^4.1.8"
   }
 }
