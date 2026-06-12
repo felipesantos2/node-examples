@@ -8,6 +8,7 @@ var pdf = 'https://www.novocruzeiro.mg.gov.br/publicos/decreto_067-2026_regulame
 
 // middleware function
 function logger(req, res, next) {
+    console.log(Date.now().toLocaleString('pt-BR'))
     console.log(req.params);
     next();
 };
