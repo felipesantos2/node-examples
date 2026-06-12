@@ -1,11 +1,7 @@
-const taskService = require('../services/task.service');
-
 class TaskController {
-
-    // CREATE a new task
     async create(req, res) {
         try {
-            const task = await taskService.createTask(req.body);
+            const task = await service.createTask(req.body);
             res.status(201).json({
                 success: true,
                 message: 'Task created successfully',
@@ -28,7 +24,7 @@ class TaskController {
             if (status) filters.status = status;
             if (priority) filters.priority = priority;
 
-            const tasks = await taskService.getAllTasks(filters);
+            const tasks = await service.getAllTasks(filters);
             res.status(200).json({
                 success: true,
                 count: tasks.length,
@@ -45,7 +41,7 @@ class TaskController {
     // READ a single task
     async getById(req, res) {
         try {
-            const task = await taskService.getTaskById(req.params.id);
+            const task = await service.getTaskById(req.params.id);
             res.status(200).json({
                 success: true,
                 data: task
@@ -61,7 +57,7 @@ class TaskController {
     // UPDATE a task
     async update(req, res) {
         try {
-            const task = await taskService.updateTask(req.params.id, req.body);
+            const task = await service.updateTask(req.params.id, req.body);
             res.status(200).json({
                 success: true,
                 message: 'Task updated successfully',
@@ -78,7 +74,7 @@ class TaskController {
     // DELETE a task
     async delete(req, res) {
         try {
-            await taskService.deleteTask(req.params.id);
+            await service.deleteTask(req.params.id);
             res.status(200).json({
                 success: true,
                 message: 'Task deleted successfully'
@@ -94,7 +90,7 @@ class TaskController {
     // Get task statistics
     async getStats(req, res) {
         try {
-            const stats = await taskService.getTaskStats();
+            const stats = await service.getTaskStats();
             res.status(200).json({
                 success: true,
                 data: stats
