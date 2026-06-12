@@ -1,6 +1,4 @@
 import express from 'express';
-import { readFile } from 'node:fs/promises';
-import { pipeline } from 'node:stream/promises';
 import path from 'node:path';
 
 
@@ -27,8 +25,6 @@ app.get('/download-pdf', async (req, res) => {
     // todo: download this pdf
     let pdfUrl = 'https://www.novocruzeiro.mg.gov.br/publicos/decreto_067-2026_regulamenta_no_municipio_de_novo_cruzeiro_a_10104859.pdf';
 
-    let pdf = await readFile(pdfUrl);
-    console.log(pdf);
     res.download(pdfUrl, (status) => {
         console.log(status)
     })
